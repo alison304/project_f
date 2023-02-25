@@ -28,40 +28,37 @@ export default function LoginComponent(props){
 
     return (
         <React.Fragment>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className="pato">
                 <Grid item xs={4}>
                     <Box display="flex" justifyContent="flex-start">
-                        <img className="img-login" src="https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="login" />
+                        <img className="img-login" src="https://i0.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2021/05/luca-6.jpg?resize=800%2C1132&ssl=1" alt="login" />
                     </Box>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={8} className="left2">
                 <div className="login">
                 <br/>
-                <div>
-                    <img className='img-ban' src="/assets/Logo/Organized_office.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
-                    <h1>INICIO DE SESION</h1>
-                    <br/>
-                    <h3>Hola👋</h3>
-                    <p>Ingrese la información que ingresó al registrarse.</p>
-                    <br/>
+                <div className="formulario">
+                    <img className='img-ban' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
+                    <h1 className="subtitlo">Inicia sesión</h1>
                     <form onSubmit={submitForm}>
                         <div>
-                            <label htmlFor="email" className="email">Email</label><br/>
-                            <input type="text" name="user" value={user} onChange={(e)=> {
+                            <label htmlFor="email" className="email"></label><br/>
+                            <input className="inpt"  type="text" name="user"  placeholder="Email" value={user} onChange={(e)=> {
                                 setUser(e.target.value);
                             }} />
                         </div>
-                        <br/>
                         <div>
-                            <label htmlFor="password" className="passw">Password</label><br/>
-                            <input type="password" name="password" value={password} onChange={(e)=> {
+                            <label htmlFor="password" className="passw"></label><br/>
+                            <input className="inpt" type="password" name="password" placeholder="Contraseña" value={password} onChange={(e)=> {
                                 setPassword(e.target.value);
                             }}/>
                             <br/><br/><br/>
-                            <Link to={"/register"}>Si no tienes una cuenta. Regístrate aquí👇</Link>
+                            <input className="btn-sub" type="submit" value="Iniciar sesión" />
+                            <br/><br/><br/>
+                            <Link className="linko" to={"/register"}>¿Primera vez aquí? <span className="bold">Regístrate aquí</span></Link>
                         </div>
                         <br/><br/>
-                        <input className="btn-sub" type="submit" value="INICIAR SESION" />
+                        
                     </form>
                 </div>
             </div>

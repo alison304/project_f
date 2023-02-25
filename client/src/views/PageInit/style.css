@@ -1,5 +1,5 @@
-.banner {
-    background-image: linear-gradient(rgba(0,0,0.2,0.4),rgba(0,0,0.2,0.5)), url(https://images.pexels.com/photos/8960464/pexels-photo-8960464.jpeg?auto=compress&cs=tinysrgb&w=1600);
+.banner2 {
+    background-image: linear-gradient(rgba(0,0,0.2,0.4),rgba(0, 0, 0, 0.692)), url(https://img.freepik.com/foto-gratis/varios-simbolos-cine_23-2147698942.jpg?w=2000&t=st=1677294010~exp=1677294610~hmac=4aa9604ed292b63dde6f8e55d199371dac49fa97fc03edd6010c4e472e86bff9);
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -7,6 +7,9 @@
     margin: 0;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    justify-content: center;
+    text-align: center;
+    height: 500px;
 }
 
 .img-ban {
@@ -15,7 +18,14 @@
 
 .title {
     text-align: center;
-    font-size: 45px;
+    font-size: 70px;
+    width: 900px;
+    margin-top: 150px;
+}
+
+.title2{
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .text {

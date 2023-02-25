@@ -1,7 +1,7 @@
 const { mongoose , connect } = require('mongoose');
 
 module.exports.connectMongo = () => {
-    connect('mongodb://localhost/organized_office', {
+    connect('mongodb://localhost/magic_film', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

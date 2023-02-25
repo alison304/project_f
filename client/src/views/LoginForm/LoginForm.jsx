@@ -38,7 +38,9 @@ export default function LoginComponent(props){
                 <div className="login">
                 <br/>
                 <div>
-                    <img className='img-ban' src="/assets/Logo/Organized_office.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
+                    <Box display="flex" justifyContent="left">
+                        <h1 className="title" onClick={() => navigate("/")}>MAGIC FILM</h1>
+                    </Box>
                     <h1>INICIO DE SESION</h1>
                     <br/>
                     <h3>Hola👋</h3>

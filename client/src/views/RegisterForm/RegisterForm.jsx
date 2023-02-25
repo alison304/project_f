@@ -146,14 +146,16 @@ const RegisterComponent = () => {
                 {({ values, errors, touched, setFieldValue }) => (
                     <Form>
                         <Grid container>
-                            <Grid direction="column" item xs={2}>
+                            <Grid container direction="column" item xs={2}>
                                 <Box display="flex" justifyContent="flex-start">
                                     <img className='img-regist' src="https://images.pexels.com/photos/4144832/pexels-photo-4144832.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="imagen" />
                                 </Box>
                             </Grid>
                             <Grid container direction="column" item xs={10}>
                                 <Box className='registro'>
-                                    <img className='img-reg' src="/assets/Logo/Organized_office.png" alt="logo" width="250" height="100" onClick={() => navigate("/")} />
+                                    <Box display="flex" justifyContent="left">
+                                        <h1 className="title" onClick={() => navigate("/")}>MAGIC FILM</h1>
+                                    </Box>
                                     {id ? (
                                         <h3>Actualizar {user.name}</h3>
                                     ) : (
@@ -232,7 +234,7 @@ const RegisterComponent = () => {
                                             </div>
                                             <br />
                                             <div>
-                                                <label>Fecha de nacimiento</label>
+                                                <label>Fecha de nacimiento</label><br />
                                                 <DatePicker
                                                     value={values.birthdate}
                                                     name="birthdate"

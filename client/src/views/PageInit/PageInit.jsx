@@ -15,16 +15,14 @@ const PageInit = () => {
     return (
         <div>
             <div className="banner">
-                <img className='' src="" alt="logo" width="250" height="100" />
+                {/* <img className='' src="" alt="logo" width="250" height="100" /> */}
                 <Box display="flex" justifyContent="left">
                     <h1 className="title">MAGIC FILM</h1>
                 </Box>
                 <br/>
-                <h5 className="text">Gestor de usuarios interactiva</h5>
             </div>
             <br/>
             <div className="md">
-                <p className='opcion'>Por favor seleccione una opción</p>
                 <br/>
                 <Box display="flex" justifyContent="center">
                     <Button 
@@ -65,12 +63,12 @@ const PageInit = () => {
                 <Grid container>
                     <Grid item md={6} xs={12}>
                         <div className="logo-container">
-                            <img
+                            {/* <img
                             src="/assets/Logo/Organized_office.png"
                             alt="Foto Logo"
                             width="170"
                             height="100"
-                            />
+                            /> */}
                         </div>
                     </Grid>
                     <Grid item md={6} xs={12}>

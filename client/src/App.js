@@ -14,6 +14,7 @@ function App() {
           <Route path='/login' element={<LoginForm/>}/>
           <Route path='/register' element={<RegisterForm/>}/>
           <Route path='/user/:id' element={<RegisterForm/>}/>
+          <Route path='/user/list' element={<FormList/>}/>          
         </Routes>
       </BrowserRouter>
     </div>

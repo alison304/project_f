@@ -52,6 +52,10 @@ const userSchema = new Schema({
         type: String,
         required: [false, 'Debe ingresar la confirmación de contraseña'],
     },     
+    isAdmin: {
+        type: Boolean,
+        required: [true],
+    },         
 }, { timestamps: true });
 
 userSchema.plugin(uniqueValidator);

@@ -54,7 +54,7 @@ module.exports.updateMovie = async (req, res) => {
     try {
         const { params, body } = req;
         const { id } = params;
-        const updatedMovie = await User.findByIdAndUpdate(id, body, { new: true });
+        const updatedMovie = await Movie.findByIdAndUpdate(id, body, { new: true });
         res.json({
             message: 'Se actualiza de manera exitosa la información',
             updatedMovie,

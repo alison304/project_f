@@ -4,14 +4,14 @@
     margin-right: 30px;
 }
 
-.btn-home {
-    margin-right: 20px;
-    width: 180px;
+.btn-h {
+    width: 200px;
     height: 35px;
-    border-radius: 5px;
-    border: 1px solid #9575cd;
-    font-size: 15px;
+    border-radius: 2px;
+    border: 1px solid red;
+    font-size: 14px;
     color: white;
-    background-color: #50249b;
+    background-color: red;
+    font-weight: bold;
 }
 

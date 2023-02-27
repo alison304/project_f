@@ -203,9 +203,10 @@ const MovieList = (props) => {
 
     return (
         <div className="form-list">
-            <img src="/assets/Logo/Organized_office.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
-            <h1>Películas</h1>
-            <br/>       
+            <br/>
+            <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
+            <br/>
+            <h1>Películas</h1>      
             <Box display="flex" justifyContent="flex-end">
             <Button className="btn-home" to="/movies/new" onClick={() => navigate("/movie")}> + Agregar una película</Button>            
             </Box>

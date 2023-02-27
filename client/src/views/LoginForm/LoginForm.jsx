@@ -30,15 +30,20 @@ export default function LoginComponent(props){
         <React.Fragment>
             <Grid container spacing={2} className="pato">
                 <Grid item xs={4}>
-                    <Box display="flex" justifyContent="flex-start">
-                        <img className="img-login" src="https://i0.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2021/05/luca-6.jpg?resize=800%2C1132&ssl=1" alt="login" />
+                    <Box display="flex" justifyContent="flex-center">
+                        <img className="img-login" src="https://es.web.img3.acsta.net/pictures/15/07/08/14/59/530666.jpg" alt="login" />
                     </Box>
                 </Grid>
                 <Grid item xs={8} className="left2">
                 <div className="login">
-                <br/>
+                <br/><br/>
                 <div className="formulario">
-                    <img className='img-ban' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
+                    <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
+                    <br/><br/><br/><br/>
+                    <h1>Bienvenido!</h1>
+                    <br/>
+                    <p>Por favor inicie sesión en su cuenta</p>
+                    <br/><br/>
                     <h1 className="subtitlo">Inicia sesión</h1>
                     <form onSubmit={submitForm}>
                         <div>

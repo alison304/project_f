@@ -32,6 +32,7 @@ const RegisterComponent = () => {
         email: '',
         password: '',
         password2: '',
+        isAdmin: false
     });
     const [errorsResponse, setErrorsResponse] = useState();
 
@@ -148,21 +149,24 @@ const RegisterComponent = () => {
                         <Grid container>
                             <Grid container direction="column" item xs={2}>
                                 <Box display="flex" justifyContent="flex-start">
-                                    <img className='img-regist' src="https://images.pexels.com/photos/4144832/pexels-photo-4144832.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="imagen" />
+                                    <img className='img-regist' src="https://lumiere-a.akamaihd.net/v1/images/image_1e5c5703.jpeg?region=0%2C0%2C540%2C810" alt="imagen" />
                                 </Box>
                             </Grid>
                             <Grid container direction="column" item xs={10}>
+                                <br />
                                 <Box className='registro'>
                                     <Box display="flex" justifyContent="left">
                                         <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
                                     </Box>
+                                    <br />
                                     {id ? (
-                                        <h3>Actualizar {user.name}</h3>
+                                        <h2>ACTUALIZAR {user.name}</h2>
                                     ) : (
-                                        <h3>Registrar</h3>
+                                        <h2>REGISTRATE</h2>
                                     )}
                                     <br />
-                                    <p>📋Vamos a preparar todo para que pueda verificar su cuenta personal y comenzar a configurar su perfil.</p>
+                                    <p>📋Por favor complete el formulario para continuar.</p>
+                                    <br />
                                     <div className='row'>
                                         <div className='column'>
                                             <h3>Datos personales</h3>
@@ -283,17 +287,17 @@ const RegisterComponent = () => {
                                     <br />
                                     <br />
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Actualizar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red' }} className='btn-c' type="submit">Actualizar</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Registrar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red' }} className='btn-c' type="submit">Registrar</Button>
                                     )}
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red' }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red' }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

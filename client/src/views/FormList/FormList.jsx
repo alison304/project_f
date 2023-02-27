@@ -213,17 +213,19 @@ const FormList = (props) => {
 
     return (
         <div className="form-list">
+            <br/>
             <Box display="flex" justifyContent="left">
               <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
             </Box>
+            <br/>
             <h1>Clientes</h1>
             <br/>
-            <h5>Aqui se encuentran los datos de cada contacto</h5>            
+            <p>Aqui se encuentran los datos de cada contacto</p>            
             <Box display="flex" justifyContent="flex-end">
-            <Button className="btn-home" to="/users/new" onClick={() => navigate("/register")}> + Agregar un cliente</Button>            
+            <Button className="btn-h" to="/users/new" onClick={() => navigate("/register")}> + Agregar un cliente</Button>            
             </Box>
-            <Button className="btn-home" onClick={clearFilters}>Clear filters</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button className="btn-home" onClick={clearAll}>Clear filters and sorters</Button>
+            <Button className="btn-h" onClick={clearFilters}>Clear filters</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <Button className="btn-h" onClick={clearAll}>Clear filters and sorters</Button>
             <br/><br/>            
             <Table columns={columns} dataSource={dataSource} onChange={handleChange} />
             <Link className="home" to="/">Back to home</Link>       

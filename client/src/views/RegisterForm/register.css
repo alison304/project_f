@@ -17,6 +17,12 @@
 .btn-c {
     width: 200px;
     height: 35px;
+    border-radius: 2px;
+    border: 1px solid red;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
 }
 
 .form-2 {

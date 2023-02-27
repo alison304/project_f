@@ -34,12 +34,7 @@ const Navbar2 = () => {
             }]}>
         <Container maxWidth="xl">
             <div className='container'>
-            <img
-                className='logo2'
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-                alt=""
-            />
-
+            <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
             <img
                 className='logo3'
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"

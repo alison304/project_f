@@ -9,91 +9,25 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "./style.css"
+import Navbar2 from '../../components/navbar2';
 
 const PageInit = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <div className="banner">
-                {/* <img className='' src="" alt="logo" width="250" height="100" /> */}
-                <Box display="flex" justifyContent="left">
-                    <h1 className="title">MAGIC FILM</h1>
+            <Navbar2/>
+            <div className="banner2">
+                <Box display="flex" justifyContent="center" marginBottom="20px">
+                    <h1 className="title">Películas y series ilimitadas y mucho más</h1>
                 </Box>
-                <br/>
+                <p className="title2">Disfruta donde quieras y cuando quieras</p>
             </div>
             <br/>
             <div className="md">
+                <p className='opcion'></p>
                 <br/>
-                <Box display="flex" justifyContent="center">
-                    <Button 
-                    style={{
-                        borderRadius: 8,
-                        border: "1px solid #9575cd",
-                        backgroundColor: "#9575cd",
-                        color: "#FFFFFF",
-                        boxShadow: "5px 6px 7px black",
-                        padding: "5px 55px",
-                        fontSize: "16px",
-                        marginRight: "30px"
-                    }} 
-                    onClick={() => navigate(`/register`)}>Regístrate</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Button 
-                    style={{
-                        borderRadius: 8,
-                        border: "1px solid #9575cd",
-                        backgroundColor: "#9575cd",
-                        color: "#FFFFFF",
-                        boxShadow: "5px 6px 7px black",
-                        padding: "5px 55px",
-                        fontSize: "16px",
-                        marginRight: "30px"
-                    }} 
-                    onClick={() => navigate(`/login`)}>Inicio de sesión</Button>
-                </Box>
             </div>
             <div className='footer'>
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        width: "100%",
-                        bgcolor: "#eeeeee",
-                    }}
-                >
-                <Grid container>
-                    <Grid item md={6} xs={12}>
-                        <div className="logo-container">
-                            {/* <img
-                            src="/assets/Logo/Organized_office.png"
-                            alt="Foto Logo"
-                            width="170"
-                            height="100"
-                            /> */}
-                        </div>
-                    </Grid>
-                    <Grid item md={6} xs={12}>
-                        <Box display="flex" justifyContent="flex-end">
-                            <div className="social-container">
-                            <br/>
-                            <h3 className='text-1'>Contacta con nosotros</h3>
-
-                            <a href="https://www.youtube.com/" className="social">
-                                <FontAwesomeIcon icon={faYoutube} size="2x" />
-                            </a>
-                            <a href="https://www.facebook.com/" className="social">
-                                <FontAwesomeIcon icon={faFacebook} size="2x" />
-                            </a>
-                            <a href="https://www.twitter.com/" className="social">
-                                <FontAwesomeIcon icon={faTwitter} size="2x" />
-                            </a>
-                            <a href="https://www.instagram.com/" className="social">
-                                <FontAwesomeIcon icon={faInstagram} size="2x" />
-                            </a>
-                            </div>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Box>
         </div>
     </div>
     )

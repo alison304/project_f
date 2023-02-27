@@ -1,7 +1,7 @@
 const { mongoose , connect } = require('mongoose');
 
 module.exports.connectMongo = () => {
-    connect('mongodb://localhost/magic_film', {
+    connect('mongodb+srv://test:12345@cluster0.ifybok1.mongodb.net/magic_film?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

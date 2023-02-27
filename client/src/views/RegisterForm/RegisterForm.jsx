@@ -154,7 +154,7 @@ const RegisterComponent = () => {
                             <Grid container direction="column" item xs={10}>
                                 <Box className='registro'>
                                     <Box display="flex" justifyContent="left">
-                                        <h1 className="title" onClick={() => navigate("/")}>MAGIC FILM</h1>
+                                        <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
                                     </Box>
                                     {id ? (
                                         <h3>Actualizar {user.name}</h3>

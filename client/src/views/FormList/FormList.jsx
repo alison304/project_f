@@ -213,7 +213,9 @@ const FormList = (props) => {
 
     return (
         <div className="form-list">
-            <img src="/assets/Logo/Organized_office.png" alt="logo" width="250" height="100" onClick={() => navigate("/")}/>
+            <Box display="flex" justifyContent="left">
+              <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
+            </Box>
             <h1>Clientes</h1>
             <br/>
             <h5>Aqui se encuentran los datos de cada contacto</h5>            

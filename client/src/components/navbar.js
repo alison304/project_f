@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -15,9 +15,15 @@ import "./navbar.css";
 const pages = ['Inicio', 'Series', 'Películas', 'Mi Lista'];
 const settings = ['Perfil', 'Logout'];
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    useEffect(() => {
+
+    }, [props.render]);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -37,15 +43,11 @@ const Navbar = () => {
     return (
         <AppBar className="navbar" sx={[
             {
-                backgroundColor: 'rgba(255, 255, 255, 0)',
+                backgroundColor: 'rgba(0, 0, 0)',
             }]}>
         <Container maxWidth="xl">
             <div className='container'>
-            <img
-                className='logo2'
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-                alt=""
-            />
+            <h1 className='tit'>Magic Film</h1>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
                 <IconButton
@@ -83,11 +85,7 @@ const Navbar = () => {
                 ))}
                 </Menu>
             </Box>
-            <img
-                className='logo3'
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-                alt=""
-            />
+            
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                 <Button
@@ -103,7 +101,8 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Remy Sharp" src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+                    <span className='user'>Bienvenid@ {user.name}</span>
+                    <Avatar alt="Remy Sharp" src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png" />
                 </IconButton>
                 </Tooltip>
                 <Menu

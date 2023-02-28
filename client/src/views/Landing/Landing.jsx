@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import LandingAdmin from '../LandingAdmin/LandingAdmin';
+import Navbar from "../../components/navbar";
+import "./style.css";
+import Featured from "../../components/Featured";
+import List from "../../components/List";
 
 const Landing = (props) => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -14,8 +18,10 @@ const Landing = (props) => {
                 <LandingAdmin user={user} />
 
             ) : (
-                <div>
-                    Alison
+                <div className="fondo">
+                    <Navbar/>
+                    <Featured/>
+                    <List/>
                 </div>
             )}
         </React.Fragment>

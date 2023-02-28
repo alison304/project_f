@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import LandingAdmin from '../LandingAdmin/LandingAdmin';
 
-const user = JSON.parse(localStorage.getItem("user"));
-const isAdmin = { user };
+const Landing = (props) => {
+    const user = JSON.parse(localStorage.getItem("user"));
 
-const Landing = () => {
+    useEffect(() => {
+
+    }, [props.render]);
+
     return (
         <React.Fragment>
-            {isAdmin ? (
-                <LandingAdmin />
+            {user.isAdmin ? (
+                <LandingAdmin user={user} />
 
             ) : (
                 <div>

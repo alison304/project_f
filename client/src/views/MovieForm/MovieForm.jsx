@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { createMovie, getOneMovie, updateMovie } from "../../services/movie.service";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Grid, Button } from '@mui/material';
@@ -53,7 +53,8 @@ const MovieForm = () => {
     const sendNewMovie = async (movie) => {
         try {
             console.log("sendNewMovie", movie);
-                {id ? await updateMovie(id, movie)
+            {
+                id ? await updateMovie(id, movie)
                     .then((response) => {
                         Swal.fire({
                             icon: 'success',
@@ -80,7 +81,8 @@ const MovieForm = () => {
                         .catch((err) => {
                             console.log(err);
                         })
-        }}
+            }
+        }
         catch (error) {
             Swal.fire({
                 icon: 'error',
@@ -109,9 +111,9 @@ const MovieForm = () => {
                             </Grid>
                             <Grid container direction="column" item xs={10}>
                                 <Box className='registro'>
-                                    <br/>
-                                    <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>    
-                                    <br/>
+                                    <br />
+                                    <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
+                                    <br />
                                     {id ? (
                                         <h2>EDITAR {movie.name}</h2>
                                     ) : (
@@ -154,18 +156,38 @@ const MovieForm = () => {
                                                 )}
                                             </div>
                                             <br />
-                                            <div>
-                                                <label>Portada</label>
-                                                <Field name="photo" />
-                                                {errors.photo && touched.photo ? (
-                                                    <div>{errors.photo}</div>
-                                                ) : null}
-                                                {errorsResponse?.photo && (
-                                                    <div>{errorsResponse.photo.message}</div>
-                                                )}
-                                            </div>
+                                            {id ? (
+                                                <Fragment></Fragment>
+                                            ) : (
+                                                <div>
+                                                    <label>Portada</label>
+                                                    <Field name="photo" />
+                                                    {errors.photo && touched.photo ? (
+                                                        <div>{errors.photo}</div>
+                                                    ) : null}
+                                                    {errorsResponse?.photo && (
+                                                        <div>{errorsResponse.photo.message}</div>
+                                                    )}
+                                                </div>
+
+                                            )}
                                         </div>
                                     </div>
+                                    {id ? (
+                                        <div className='row'>
+                                            <div className='column'>
+                                                <label>Foto</label><br />
+                                                <img
+                                                    width="400px"
+                                                    height="400px"
+                                                    src={movie.photo}
+                                                    alt="cloudinary"
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <Fragment></Fragment>
+                                    )}
                                     <br />
                                     <br />
                                     {id ? (
@@ -179,7 +201,7 @@ const MovieForm = () => {
                                         <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/movie/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/movie/list")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

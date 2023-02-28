@@ -104,16 +104,18 @@ const MovieForm = () => {
                         <Grid container>
                             <Grid container direction="column" item xs={2}>
                                 <Box display="flex" justifyContent="flex-start">
-                                    <img className='img-regist' src="https://images.pexels.com/photos/4144832/pexels-photo-4144832.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="imagen" />
+                                    <img className='img-regist' src="https://lumiere-a.akamaihd.net/v1/images/p_encanto_homeent_22359_4892ae1c.jpeg" alt="imagen" />
                                 </Box>
                             </Grid>
                             <Grid container direction="column" item xs={10}>
                                 <Box className='registro'>
-                                    
+                                    <br/>
+                                    <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>    
+                                    <br/>
                                     {id ? (
-                                        <h1>Editar {movie.name}</h1>
+                                        <h2>EDITAR {movie.name}</h2>
                                     ) : (
-                                        <h1>Crear Película</h1>
+                                        <h2>CREAR PELICULA</h2>
                                     )}
                                     <br />
                                     <div className='row'>
@@ -167,17 +169,17 @@ const MovieForm = () => {
                                     <br />
                                     <br />
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Actualizar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Actualizar</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Registrar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Registrar</Button>
                                     )}
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/movie/list")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/movie/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: 'red', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

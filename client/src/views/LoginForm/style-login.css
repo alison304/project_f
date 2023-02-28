@@ -7,10 +7,10 @@
     width: 322px;
     height: 45px;
     border-radius: 2px;
-    border: 1px solid red;
+    border: 1px solid #d22215;
     font-size: 14px;
     color: white;
-    background-color: red;
+    background-color: #d22215;
     font-weight: bold;
 }
 

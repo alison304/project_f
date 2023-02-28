@@ -44,12 +44,21 @@ const Navbar2 = () => {
             <Box sx={{ flexGrow: 0 }}>
                 <Button 
                     style={{
-                        backgroundColor: "red",
+                        backgroundColor: "#d22215",
                         color: "#FFFFFF",
-                        padding: "5px 25px",
+                        padding: "5px 11px",
                         fontSize: "14px"
                     }} 
                     onClick={() => navigate(`/login`)}>Iniciar sesión</Button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <Button 
+                    style={{
+                        backgroundColor: "#d22215",
+                        color: "#FFFFFF",
+                        padding: "5px 15px",
+                        fontSize: "14px"
+                    }} 
+                    onClick={() => navigate(`/register`)}>Registrate</Button>
             </Box>
             </div>
         </Container>

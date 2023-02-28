@@ -206,7 +206,9 @@ const MovieList = (props) => {
             <br/>
             <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
             <br/>
-            <h1>Películas</h1>      
+            <h1>Películas</h1>
+            <br />
+            <p>Lista de películas</p>
             <Box display="flex" justifyContent="flex-end">
             <Button className="btn-home" to="/movies/new" onClick={() => navigate("/movie")}> + Agregar una película</Button>            
             </Box>

@@ -24,12 +24,51 @@ const PageInit = () => {
             </div>
             <br/>
             <div className="md">
-                <p className='opcion'></p>
-                <br/>
             </div>
             <div className='footer'>
+            <Box
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "100%",
+                        bgcolor: "#141212",
+                    }}
+                >
+                <Grid container>
+                    <Grid item md={6} xs={12}>
+                        <div className="logo-container">
+                            <img
+                            src="/assets/Logo/favicon.ico"
+                            alt="Foto Logo"
+                            width="50"
+                            height="50"
+                            />
+                        </div>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <Box display="flex" justifyContent="flex-end">
+                            <div className="social-container">
+                            <br/>
+                            <p className='text-1'>Encuentranos en redes</p>
+                            <a href="https://www.youtube.com/" className="social">
+                                <FontAwesomeIcon icon={faYoutube} size="2x" />
+                            </a>
+                            <a href="https://www.facebook.com/" className="social">
+                                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                            </a>
+                            <a href="https://www.twitter.com/" className="social">
+                                <FontAwesomeIcon icon={faTwitter} size="2x" />
+                            </a>
+                            <a href="https://www.instagram.com/" className="social">
+                                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                            </a>
+                            </div>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
+            </div>
         </div>
-    </div>
     )
 }
 

@@ -42,15 +42,15 @@
 }
 
 .text-1 {
-    font-size: 20px;
-    color: #452086;
-    font-weight: bolder;
+    font-size: 19px;
+    color: #d22215;
     padding-right: 100px;
+    padding-bottom: 10px;
 }
 
 .social {
     padding-right: 20px;
-    color: #9575cd;
+    color: #d22215;
 }
 
 .footer {
@@ -58,4 +58,10 @@
     bottom: 0;
     width: 100%;
     height: 100px;
+    background-color: #141212;
+}
+
+.logo-container {
+    padding-left: 20px;
+    padding-top: 20px;
 }

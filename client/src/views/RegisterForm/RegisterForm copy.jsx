@@ -299,17 +299,17 @@ const RegisterComponent = () => {
                                     <br />
                                     <br />
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Actualizar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Actualizar</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Registrar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', display: 'inline', fontSize: 14 }} className='btn-c' type="submit">Registrar</Button>
                                     )}
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#9575cd', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', display: 'inline', fontSize: 14 }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

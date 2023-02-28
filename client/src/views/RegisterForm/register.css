@@ -8,10 +8,10 @@
     width: 180px;
     height: 35px;
     border-radius: 5px;
-    border: 1px solid #9575cd;
+    border: 1px solid red;
     font-size: 15px;
     color: white;
-    background-color: #9575cd;
+    background-color: red;
 }
 
 .btn-c {

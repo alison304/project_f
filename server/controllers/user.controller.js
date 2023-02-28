@@ -96,6 +96,7 @@ module.exports.login = async (req, res) => {
         res.send({
             status: "OK",
             token: token,
+            user: user
         });
     } else {
         res.status(401).send({error: "Invalid Login"})

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { createUser, getOneUser, updateUser } from "../../services/user.service";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Grid, Paper, Button } from '@mui/material';
@@ -28,6 +28,7 @@ const RegisterComponent = () => {
         phone: '',
         address: '',
         country: '',
+        photo: '',
         birthdate: new Date(),
         email: '',
         password: '',
@@ -75,6 +76,7 @@ const RegisterComponent = () => {
         country: Yup.string()
             .min(3, 'Too Short!')
             .required("Required country"),
+        photo: Yup.string(),
         email: Yup.string()
             .email('Not a proper email')
             .required("Required email"),
@@ -238,6 +240,23 @@ const RegisterComponent = () => {
                                             </div>
                                             <br />
                                             <div>
+                                            {id ? (
+                                                <Fragment></Fragment>
+                                            ) : (
+                                                <div>
+                                                    <label>Foto</label>
+                                                    <Field name="photo" />
+                                                    {errors.photo && touched.photo ? (
+                                                        <div>{errors.photo}</div>
+                                                    ) : null}
+                                                    {errorsResponse?.photo && (
+                                                        <div>{errorsResponse.photo.message}</div>
+                                                    )}
+                                                </div>
+                                            )}
+                                            </div>
+                                            <br />
+                                            <div>
                                                 <label>Fecha de nacimiento</label><br />
                                                 <DatePicker
                                                     value={values.birthdate}
@@ -287,17 +306,17 @@ const RegisterComponent = () => {
                                     <br />
                                     <br />
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215' }} className='btn-c' type="submit">Actualizar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Actualizar</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215' }} className='btn-c' type="submit">Registrar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Registrar</Button>
                                     )}
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215' }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215' }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

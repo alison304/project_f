@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
+import { useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -12,14 +13,25 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import "./navbar.css";
 
-const pages = ['Inicio', 'Series', 'Películas', 'Mi Lista'];
-const settings = ['Perfil', 'Logout'];
+const pages = [''];
 
 const Navbar = (props) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const user = JSON.parse(localStorage.getItem("user"));
+
+    const navigate = useNavigate();
+
+    const logout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        navigate("/");
+    };
+
+    const userpage = () => {
+        navigate("/");
+    };
 
     useEffect(() => {
 
@@ -121,11 +133,9 @@ const Navbar = (props) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
                 >
-                {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                ))}
+                <Button className='setting' onClick={userpage}>Perfil</Button>
+                <br/>
+                <Button className='setting' onClick={logout}>Log out</Button>
                 </Menu>
             </Box>
             </div>

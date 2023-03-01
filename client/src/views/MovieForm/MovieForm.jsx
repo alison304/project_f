@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { createMovie, getOneMovie, updateMovie } from "../../services/movie.service";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Grid, Button } from '@mui/material';
@@ -166,6 +166,21 @@ const MovieForm = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    {id ? (
+                                        <div className='row'>
+                                            <div className='column'>
+                                                <label>Foto</label><br />
+                                                <img
+                                                    width="400px"
+                                                    height="400px"
+                                                    src={movie.photo}
+                                                    alt="cloudinary"
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <Fragment></Fragment>
+                                    )}
                                     <br />
                                     <br />
                                     {id ? (

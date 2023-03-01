@@ -56,6 +56,9 @@ const userSchema = new Schema({
         type: Boolean,
         required: [true],
     },         
+    photo: {
+        type: String
+    },    
 }, { timestamps: true });
 
 userSchema.plugin(uniqueValidator);

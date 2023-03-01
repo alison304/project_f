@@ -19,6 +19,12 @@
     margin-top: 10px;
 }
 
+Button.setting{
+    color: black;
+    font-size: 13px;
+    font-weight: 500
+}
+
 .tit{
     margin-right: 30px;
     position: relative;

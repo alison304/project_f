@@ -240,20 +240,20 @@ const RegisterComponent = () => {
                                             </div>
                                             <br />
                                             <div>
-                                            {id ? (
-                                                <Fragment></Fragment>
-                                            ) : (
-                                                <div>
-                                                    <label>Foto</label>
-                                                    <Field name="photo" />
-                                                    {errors.photo && touched.photo ? (
-                                                        <div>{errors.photo}</div>
-                                                    ) : null}
-                                                    {errorsResponse?.photo && (
-                                                        <div>{errorsResponse.photo.message}</div>
-                                                    )}
-                                                </div>
-                                            )}
+                                                {id ? (
+                                                    <Fragment></Fragment>
+                                                ) : (
+                                                    <div>
+                                                        <label>Foto</label>
+                                                        <Field name="photo" />
+                                                        {errors.photo && touched.photo ? (
+                                                            <div>{errors.photo}</div>
+                                                        ) : null}
+                                                        {errorsResponse?.photo && (
+                                                            <div>{errorsResponse.photo.message}</div>
+                                                        )}
+                                                    </div>
+                                                )}
                                             </div>
                                             <br />
                                             <div>
@@ -303,20 +303,35 @@ const RegisterComponent = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    {id ? (
+                                        <div className='row'>
+                                            <div className='column'>
+                                                <label>Foto</label><br />
+                                                <img
+                                                    width="400px"
+                                                    height="400px"
+                                                    src={user.photo}
+                                                    alt="cloudinary"
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <Fragment></Fragment>
+                                    )}
                                     <br />
                                     <br />
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Actualizar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px', width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Actualizar</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Registrar</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px', width: '200px', borderRadius: '5px' }} className='btn-c' type="submit">Registrar</Button>
                                     )}
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     {id ? (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px', width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/user/list")}>Cancel</Button>
 
                                     ) : (
-                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px',width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#d22215', height: '40px', width: '200px', borderRadius: '5px' }} className='btn-c' onClick={() => navigate("/")}>Cancel</Button>
                                     )}
                                 </Box>
                             </Grid>

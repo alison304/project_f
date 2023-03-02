@@ -114,7 +114,7 @@ const Navbar = (props) => {
                 <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <span className='user'>Bienvenid@ {user.name}</span>
-                    <Avatar alt="Remy Sharp" src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png" />
+                    <Avatar alt="Remy Sharp" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/64623a33850498.56ba69ac2a6f7.png" />
                 </IconButton>
                 </Tooltip>
                 <Menu
@@ -133,8 +133,6 @@ const Navbar = (props) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
                 >
-                <Button className='setting' onClick={userpage}>Perfil</Button>
-                <br/>
                 <Button className='setting' onClick={logout}>Log out</Button>
                 </Menu>
             </Box>

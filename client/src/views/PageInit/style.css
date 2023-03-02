@@ -9,7 +9,8 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     justify-content: center;
     text-align: center;
-    height: 500px;
+    height: 550px;
+    margin-top: 60px;
 }
 
 .img-ban {

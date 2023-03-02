@@ -2,8 +2,10 @@ import React from 'react';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import "./featured.css";
+import { useNavigate } from "react-router-dom";
 
 const Featured = () => {
+    const navigate = useNavigate();
     return (
         <div className='featured'>
             <img
@@ -13,12 +15,10 @@ const Featured = () => {
             />
             <div className="info">
                 <h1 className='subt'>LUCA</h1>
-                <div className="buttons">
-                    <button className="play">
+                    <button className="play" onClick={() => navigate(`/register`)}>
                         <PlayArrowIcon className='pla'/>
                         <span className='inf2'>Reproducir</span>
                     </button>
-                </div>
             </div>
         </div>
     )

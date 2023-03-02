@@ -133,8 +133,6 @@ const Navbar = (props) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
                 >
-                <Button className='setting' onClick={userpage}>Perfil</Button>
-                <br/>
                 <Button className='setting' onClick={logout}>Log out</Button>
                 </Menu>
             </Box>

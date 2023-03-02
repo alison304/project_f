@@ -114,7 +114,7 @@ const Navbar = (props) => {
                 <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <span className='user'>Bienvenid@ {user.name}</span>
-                    <Avatar alt="Remy Sharp" src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png" />
+                    <Avatar alt="Remy Sharp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEy-Hi3lntqni03_IgMHV_6nbWR5sG5EuE11oKCej1YqlHvxzo6lfyF7L_JXrJaoZIkY&usqp=CAU" />
                 </IconButton>
                 </Tooltip>
                 <Menu

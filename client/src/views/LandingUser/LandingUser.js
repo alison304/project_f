@@ -46,8 +46,7 @@ const LandingUser = (props) => {
                                                 <React.Fragment>
                                                     <div className="mov">
                                                         <img
-                                                            width="220px"
-                                                            height="180px"
+                                                            className="ioi"
                                                             src={movie.photo}
                                                             alt="cloudinary"
                                                         />

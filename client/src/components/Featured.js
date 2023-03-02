@@ -18,10 +18,6 @@ const Featured = () => {
                         <PlayArrowIcon className='pla'/>
                         <span className='inf2'>Reproducir</span>
                     </button>
-                    <button className="more">
-                        <InfoOutlinedIcon />
-                        <span className='inf'>Más información</span>
-                    </button>
                 </div>
             </div>
         </div>

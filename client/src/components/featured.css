@@ -19,7 +19,7 @@ h1.subt{
     width: 35%;
     position: absolute;
     left: 50px;
-    bottom: 100px;
+    bottom: 150px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -48,8 +48,8 @@ h1.subt{
     font-weight: 500;
     margin-right: 15px;
     cursor: pointer;
-    background-color: white;
-    color: var(--main-color);
+    background-color: rgb(0, 0, 0);
+    color: white;
     
 }
 

@@ -39,8 +39,8 @@ export default function LoginComponent(props) {
                         <br /><br />
                         <div className="formulario">
                             <h1 className="title2" onClick={() => navigate("/")}>MAGIC FILM</h1>
-                            <br /><br /><br /><br />
-                            <h1>Bienvenido!</h1>
+                            <br /><br />
+                            <h1>¡Bienvenido!</h1>
                             <br />
                             <p>Por favor inicie sesión en su cuenta</p>
                             <br /><br />

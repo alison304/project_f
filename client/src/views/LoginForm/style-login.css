@@ -43,6 +43,11 @@ span.bold{
     font-weight: 700;
 }
 
+.title2{
+    margin-top: 70px;
+    color:  #d22215
+}
+
 .formulario{
     flex-direction: column;
 }

@@ -45,7 +45,12 @@ const LandingUser = (props) => {
                                             {movieList.filter(x => x.category === category.name).map(movie => 
                                                 <React.Fragment>
                                                     <div className="mov">
-                                                        
+                                                        <img
+                                                            width="220px"
+                                                            height="180px"
+                                                            src={movie.photo}
+                                                            alt="cloudinary"
+                                                        />
                                                     </div>
                                                 </React.Fragment>                            
                                             )}

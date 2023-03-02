@@ -3,6 +3,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import "./featured.css";
 import { useNavigate } from "react-router-dom";
+import ReactPlayer from 'react-player'
 
 const Featured = () => {
     const navigate = useNavigate();
@@ -15,10 +16,7 @@ const Featured = () => {
             />
             <div className="info">
                 <h1 className='subt'>LUCA</h1>
-                    <button className="play" onClick={() => navigate(`/register`)}>
-                        <PlayArrowIcon className='pla'/>
-                        <span className='inf2'>Reproducir</span>
-                    </button>
+                <ReactPlayer url='https://www.youtube.com/watch?v=EJk_Z-OasXc' />
             </div>
         </div>
     )
